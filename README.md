@@ -29,9 +29,8 @@ Se till att du har följande installerat:
 
 Nödvändiga Python-paket:
 
-- `pandas`
-- `sqlalchemy`
-- `streamlit`
+- `pandas` to read and handle data
+- `sqlite3`
 - `matplotlib` (valfritt för ytterligare visualiseringar)
 
 ---
@@ -62,8 +61,8 @@ Nödvändiga Python-paket:
 
 ```
 project/
-├── src/app.py               # Streamlit-appens skript
-├── src/main.py              # Skript för att ladda och transformera data
+├── src/app.py           # Streamlit-appens skript
+├── src/main.ipynb       # Skript för att ladda och transformera data
 ├── config.py            # Konfigurationsfil för databasinloggning
 ├── README.md            # Projektets dokumentation
 └── data/                # Valfri mapp för att lagra exempeldata eller output
@@ -74,7 +73,29 @@ project/
 ## Funktioner
 
 - **SQL-integration:** Ladda data direkt från en SQL-databas.
-- **Datatransformation:** Använd Pandas för att städa och transformera data.
-- **Analys:** Utför avancerad dataanalys med Pandas.
+- **Datautforskning**:
+   - `info()` används för att undersöka tabellernas struktur och innehåll.
+
+- **Visualisering av Pris vs Kostnadspris**:
+   - En stapeldiagram jämför produktpriser och kostnader.
+
+- **Sammanfogning av Data**:
+   - Transaktionsdetaljer och butikens namn slås samman för att möjliggöra analys av försäljningsdata.
+
+- **Beräkning av Total Försäljning per Butik**:
+   - Summerar totalförsäljningen för varje butik.
+
+- **Identifiering av Minst Sålda Produkter**:
+   - Visar de 20 produkter som sålts minst.
+
+- **Försäljning över Tid**:
+   - Analyserar transaktionsvolymer per månad.
+
+- **Försäljning per Veckodag**:
+   - Visualiserar försäljningens fördelning över veckodagar.
+
+- **Beräkning av Vinstmarginaler**:
+   - Visar de mest lönsamma produkterna baserat på vinstmarginal.
+
 - **Visualisering:** Visa resultat interaktivt med Streamlit.
 
